@@ -127,8 +127,8 @@ img {
 }
 
 .header-nav li + li::before {
-    /*content: "/"; 
-    display: inline-block; */
+    content: "/"; 
+    display: inline-block; 
     margin: 0 0.65rem 0 0.4rem;
     color: rgba(181, 194, 217, 0.45);
     transform: skewX(-18deg) rotate(-8deg);
