@@ -47,6 +47,9 @@ function init() {
     mountHeader("visti");
     mountFooter();
     displayWatched();
+
+    //aggiunta funzione di pulizia
+     clearWatched();
 }
 
 init();

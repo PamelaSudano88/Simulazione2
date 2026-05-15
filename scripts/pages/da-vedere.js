@@ -47,6 +47,9 @@ function init() {
     mountHeader("to-watch");
     mountFooter();
     displayToWatch();
+    
+    //aggiunta funzione di pulizia
+    clearToWatch();
 }
 
 init();

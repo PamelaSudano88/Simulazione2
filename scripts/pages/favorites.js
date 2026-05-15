@@ -47,6 +47,9 @@ function init() {
     mountHeader("favorites");
     mountFooter();
     displayFavorites();
+
+    //aggiunta funzione di pulizia
+    clearFavorites();
 }
 
 init();
