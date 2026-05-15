@@ -75,6 +75,7 @@ export async function getShowSuggestions(query) {
     });
 }
 
+
 /**
  * Recupera i dettagli di una serie per ID, includendo cast ed episodi in _embedded.
  * @param {number|string} showId
