@@ -52,11 +52,19 @@ export function createShowCard(show, titleOverride = "", options = {}) {
         <div class="series-card-header">
         </div>
 
+        <div class="series-title-block">
+        <h2>${sanitizeHTML(title)}</h2>
+        <p class="series-status">${sanitizeHTML(status)}</p>
+        </div>
+
         <div class="series-current show-current">
             <div class="show-poster-wrap">
                 ${poster ? `<img class="show-poster" src="${sanitizeHTML(poster)}" alt="Poster ${sanitizeHTML(show.name)}">` : "<div class='show-poster-placeholder'>No image</div>"}
             </div>
             <div class="series-meta show-meta">
+            <div class="temp-main">⭐ ${sanitizeHTML(rating)} </div>
+            <diV class="temp-desc">${sanitizeHTML(genres)} </div>
+            <p class="show-summary">${getSafeSummary(show)}</p>
             </div>
         </div>
 

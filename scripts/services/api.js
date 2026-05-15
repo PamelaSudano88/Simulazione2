@@ -90,12 +90,25 @@ export async function getShowById(showId) {
     // - una per il cast (endpoint /shows/{id}/cast) --> cast
     // - una per gli episodi (endpoint /shows/{id}/episodes) --> episodes
     // Restituisci un oggetto che unisce i dettagli della serie con un campo _embedded che contiene cast ed episodi.
+    if (showId < 0){
+        console.error("ERRORE ID");
+     throw new Error(`${errorPrefix} (errore ${response.status})`)
+    }
+        let res = await fetch (`${API_BASE}/shows/${showId}`)
+        let show = await res.json()
+
+        let resCast = await fetch (`${API_BASE}/shows/${showId}/cast`)
+        let cast = await resCast.json()
+
+        let resEpisodi = await fetch (`${API_BASE}/shows/${showId}/episodes`)
+        let episodes = await resEpisodi.json()
+
 
     return {
         ...show,
         _embedded: {
-            cast,
-            episodes,
+            cast : cast,
+            episodes : episodes,
         },
     };
 }
